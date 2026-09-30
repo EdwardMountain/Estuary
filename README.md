@@ -8,13 +8,14 @@ It runs in any modern browser, with nothing to install.
 
 **Open Estuary:** https://USERNAME.github.io/REPOSITORY/
 
-Current version: **V1.10**. Author: **DoDo7**.
+Current version: **V1.14**. Author: **DoDo7**.
 
 ---
 
 ## What it does
 
 - **Loads Smaart measurements.** Both `.trf` files (Smaart 8 and Smaart 9, FFT and MTW traces) and ASCII exports are supported.
+- **Demo mode.** No measurements at hand? Press **Demo** to load two generated loudspeaker systems and see Estuary at work. Press **↻** for a new scenario.
 - **Shows the phase before and after correction.** Every change updates the graphs immediately, for both systems and for the phase offset between them.
 - **Suggests a correction automatically:** polarity, delay and up to 6 all-pass filters per system, 1st and 2nd order. Solutions that touch only one system are preferred.
 - **Rates the result.** The largest offset inside the chosen range is shown in green up to 60° (Good), orange from 61° to 90° (Almost Good) and red above 90°.
@@ -27,6 +28,9 @@ Current version: **V1.10**. Author: **DoDo7**.
 
 ## Quick start
 
+Want to try it first? Open Estuary, accept the license and press **Demo**. Otherwise:
+
+
 1. Open Estuary and accept the license.
 2. Load the transfer function of System 1 and System 2, by drag and drop or with **Load**.
 3. Drag the **Ignore below** and **Ignore above** lines to set the match range.
@@ -36,6 +40,8 @@ Current version: **V1.10**. Author: **DoDo7**.
 Editing any value switches to Manual mode. Press **Auto** to calculate again.
 
 ## Good to know
+
+- **Demo data is not a measurement.** It is generated in your browser from loudspeaker models (crossover filters, a small time offset, sometimes a polarity inversion, a small reflection, noise and a realistic coherence curve). While a demo is loaded, the status box shows DEMO and exported file names contain DEMO. Never load a filter exported from a demo into a real system.
 
 - **Measurements.** Both measurements should come from the same microphone position and be delay-located in Smaart.
 - **`.trf` or ASCII.** `.trf` files contain the raw data, and Estuary applies its own smoothing. ASCII exports are already smoothed by Smaart, so Estuary does not smooth them again. Their coherence column is often incomplete, so for coherence weighting use `.trf` files.
