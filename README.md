@@ -8,13 +8,14 @@ It runs in any modern browser, with nothing to install.
 
 **Open Estuary:** https://USERNAME.github.io/REPOSITORY/
 
-Current version: **V1.14**. Author: **DoDo7**.
+Current version: **V1.15**. Author: **DoDo7**.
 
 ---
 
 ## What it does
 
 - **Loads Smaart measurements.** Both `.trf` files (Smaart 8 and Smaart 9, FFT and MTW traces) and ASCII exports are supported.
+- **Trace folders (Chrome and Edge only).** Link the folders where Smaart saves your traces. **Folders** in the top bar shows the newest ones, and a trace saved by Smaart appears within seconds, ready to load into System 1 or System 2 with one click.
 - **Demo mode.** No measurements at hand? Press **Demo** to load two generated loudspeaker systems and see Estuary at work. Press **↻** for a new scenario.
 - **Shows the phase before and after correction.** Every change updates the graphs immediately, for both systems and for the phase offset between them.
 - **Suggests a correction automatically:** polarity, delay and up to 6 all-pass filters per system, 1st and 2nd order. Solutions that touch only one system are preferred.
@@ -46,6 +47,7 @@ Editing any value switches to Manual mode. Press **Auto** to calculate again.
 - **Measurements.** Both measurements should come from the same microphone position and be delay-located in Smaart.
 - **`.trf` or ASCII.** `.trf` files contain the raw data, and Estuary applies its own smoothing. ASCII exports are already smoothed by Smaart, so Estuary does not smooth them again. Their coherence column is often incomplete, so for coherence weighting use `.trf` files.
 - **All-pass models.** The filters are modelled as standard digital all-pass filters at the Prodigy sample rate you select. DirectOut does not publish the exact implementation. Before relying on the results, measure the Prodigy with an exported preset and compare it in Estuary.
+- **Trace folders need Chrome or Edge.** They rely on a browser feature that Safari and Firefox do not offer, so in those browsers the Folders button does not appear: use **Load** or drag files onto the System boxes. Add folders in **Settings → Trace folders**. Estuary only reads them and never writes to them. When you reopen Estuary the browser may ask again for access: press **Reconnect folders**.
 - **Privacy.** Your files are processed entirely in your browser and are not uploaded anywhere.
 
 ## Browser support
